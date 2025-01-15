@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total */
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; /* Melhora o espaçamento entre linhas */
+    background-color: aliceblue; 
+    text-align: center; 
+}
+
+header {
+    background-color: #333; 
+    color: #ffffff; 
+    padding: 16px; /* Espaçamento  */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; /* Distribui espaço entre logo e navegação */
+}
+
+.logo {
+    height: 100px; 
+    width: 100px; 
+    margin-left: 20px; 
+}
+
+nav ul {
+    list-style-type: none; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; /* Adiciona espaçamento entre os itens da lista */
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; 
+}
+
+.produtos {
+    display: grid; /* Define a exibição como grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanho igual */
+    gap: 30px; /* Adiciona espaçamento entre os itens */
+    margin: 50px auto; /* Adiciona margem acima e abaixo da seção e centraliza */
+    width: 80%; /* Define a largura máxima da seção */
+}
+
+
+.produto {
+    display: flex; /* Define um contêiner flexível */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Distribui espaço igualmente entre os itens */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 100%; /* Garante que todos os produtos tenham a mesma altura */
+}
+
+.produto img {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 300px; /* Define o tamanho máximo da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+}
+
+.produto .nome {
+    font-size: 1.2rem; /* Define o tamanho do texto do nome */
+    margin: 10px 0; /* Adiciona espaçamento acima e abaixo do nome */
+}
+
+.produto .preco {
+    min-height: 40px; /* Garante um espaço mínimo para o texto */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5rem; /* Define o tamanho do texto do preço */
+    color: #e60000; /* Cor do texto do preço */
+}
+
+.produto button {
+    align-self: center; /* Centraliza o botão horizontalmente */
+    margin-top: auto; /* Empurra o botão para o final do contêiner */
+    background: #e60000; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    width: 60%; /* Define a largura do botão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.produto button:hover {
+    background: #cc0000; /* Muda a cor do botão ao passar o mouse */
+}
+
+footer {
+    background: #333; /* Cor de fundo escura para o rodapé */
+    color: #fff; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 15px 0; /* Adiciona espaçamento interno no topo e na base */
+    position: absolute; /* Fixa o rodapé na parte inferior da página */
+    bottom: 0; /* Garante que o rodapé esteja no final */
+    width: 100%; /* O rodapé ocupa toda a largura da página */
+}
+
+.logo2 {
+    width: 170px;  
+    height: 100px;
+
+    margin-right: 100px;
+}
+
