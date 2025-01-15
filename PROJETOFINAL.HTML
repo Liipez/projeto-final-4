@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetFlair</title>
+    <link rel="stylesheet" href="PROJRTOFINAL.CSS">
+    <style>
+        /* Estilos do carrossel */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Ajuste o tamanho conforme necessário */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .slider li {
+            list-style: none;
+            min-width: 100%;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Controle de rádio (esconde as imagens por padrão) */
+        .slider input[type="radio"] {
+            display: none;
+        }
+
+        /* Mostra a imagem selecionada */
+        .slider input[type="radio"]:checked + label + img {
+            display: block;
+        }
+
+        /* Estilos para navegação */
+        .slider .nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nav-buttons button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 2em;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Estilos adicionais para o header e o layout */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <img src="STREETFLAIR.jpg" alt="Logo StreetFlair" class="logo2">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="PROJETOFINAL.HTML">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="SOBRE.HTML">Sobre</a></li>
+                <li><a href="CONTATO.HTML">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrossel de imagens -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="carrossel kyrie 7.jfif" alt="imagem 1">
+            <img src="carrossel superstar.jpg" alt="imagem 2">
+            <img src="carrossel tn dusk.jpeg" alt="imagem 3">
+        </div>
+    </div>
+    
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
+const totalImages = images.length;
+
+let currentIndex = 0;
+
+function changeImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    const offset = currentIndex * -600; // 600 é a largura do carrossel
+    carouselImages.style.transform = `translateX(${offset}px)`;
+}
+
+// Troca de imagem a cada 5 segundos
+setInterval(changeImage, 5000);
+ 
+    </script>
+
+    <main>
+        <section class="produtos">
+            <h2>Produtos em Destaque</h2>
+            <div class="produto">
+                <img src="tn dusk.jpeg" alt="Tênis Air Max Plus Dusk">
+                <p class="nome">Air Max Plus Dusk</p>
+                <p class="preco">R$ 1.299,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="kyrie flytrap 5.jpg" alt="Tênis Kyrie FlayTrap 5 'Black Coll Grey'">
+                <p class="nome">Kyrie FlayTrap 5 'Black Coll Grey'</p>
+                <p class="preco">R$ 699,90</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="yeezy slide.jpg" alt="Tênis Yeezy Slide Bone">
+                <p class="nome">Yeezy Slide Bone</p>
+                <p class="preco">R$ 800,00</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2025 Loja de Tênis. CRIADO POR ELE MERMO LUIZIN.</p>
+    </footer>
+</body>
+</html>
